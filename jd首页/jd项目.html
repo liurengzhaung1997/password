@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>京东首页</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" href="css/首页.css">
+	<script src="swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="swiper.min.css">
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div class="jd_box">
+		<header class="jd_head">
+		<div class="jd_title">
+			<a href="" class="jd_logo"></a>
+			<form>
+				<span class="jd_search"></span>
+				<input type="text" placeholder="请输入商品名">
+			</form>
+		<a href="" class="jd_login">登录</a>
+		</div>
+		</header>
+		<div class="jd_banner swiper-container">
+			<ul class="image_box swiper-wrapper">
+				<li class="swiper-slide"><a href="#"><img src="images/1.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/2.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/3.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/4.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/5.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/6.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/7.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/8.jpg" alt=""></a></li>
+			</ul>
+			<div class="swiper-pagination"></div>
+			<!-- <ul class="point_box">
+				<li class="current"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul> -->
+		</div>
+		<nav class="jd_nav">
+			<div class="jd_nav_first">
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+			</div>
+			<div class="jd_nav_second">
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg" alt="">
+					<p>分类查询</p>
+				</div>
+			</div>
+		</nav>
+		<div class="jd_product">
+			<div class="title_left">
+				<span class="icon_clock"></span>
+				<span class="title_text">掌上秒杀</span>
+				<div class="title_time">
+					<span id="a">0</span>
+					<span id="d">0</span>
+					<span class="annotation">:</span>
+					<span id="b">0</span>
+					<span id="e">0</span>
+					<span class="annotation">:</span>
+					<span id="c">0</span>
+					<span id="f">0</span>
+				</div>
+			</div>
+				<div class="title_right">更多>></div>
+		</div>
+		<div  class="jd_picture">
+			<ul>
+				<li><a href=""><img src="images/p1.jpg" alt=""></a>
+				<p>&yen;10</p>
+				<p>&yen;100</p>
+				</li>
+				<li><a href=""><img src="images/p1.jpg" alt=""></a>
+				<p>&yen;10</p>
+				<p>&yen;100</p>
+				</li>
+				<li><a href=""><img src="images/p1.jpg" alt=""></a>
+				<p>&yen;10</p>
+				<p>&yen;100</p>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="size">京东超市</div>
+			<div class="supermarket">
+				<a href="#" class="left"><img src="images/pf1.jpg"></a>
+				<a href="#" class="right joint"><img src="images/pf2.jpg"></a>
+				<a href="#" class="right combination"><img src="images/pf3.jpg"></a>
+			</div>
+		</div>
+		<div>
+			<div class="size">京东超市</div>
+			<div class="supermarket">
+				<a href="#" class="right"><img src="images/pf1.jpg"></a>
+				<a href="#" class="left joint"><img src="images/pf2.jpg"></a>
+				<a href="#" class="left combination"><img src="images/pf3.jpg"></a>
+			</div>
+		</div>
+		<div>
+			<div class="size">京东超市</div>
+			<div class="supermarket">
+				<a href="#" class="left"><img src="images/pf1.jpg"></a>
+				<a href="#" class="right joint"><img src="images/pf2.jpg"></a>
+				<a href="#" class="right combination"><img src="images/pf3.jpg"></a>
+			</div>
+		</div>
+	</div>
+	<script> 
+	var mySwiper = new Swiper('.jd_banner',{
+	pagination: '.swiper-pagination',
+	autoplay : 1000,
+	loop : true,
+	})
+	setInterval(function(){
+	var time = new Date();
+	var time1 = new Date(2017,7,10,20,00,00);
+	var sun = time1.getTime()-time.getTime();
+	if(sun>0){
+		var d=parseInt(sun/1000%60);
+		var e=parseInt(sun/1000/60%60);
+		var f=parseInt(sun/1000/60/60%24);
+		// var a1=parseInt(d/10%10);
+		// var a2=parseInt(e/10%10);
+		var a3=parseInt(f/10%10);
+		var a4=parseInt(f%10);
+		var a5=parseInt(e/10%10);
+		var a6=parseInt(e%10);
+		var a7=parseInt(d/10%10);
+		var a8=parseInt(d%10);
+		var as= $("#a"); 
+		var ab= $("#b"); 
+		var ad= $("#c");
+		var as1=$("#d"); 
+		var as2=$("#e"); 
+		var as3=$("#f"); 
+		as.html(a3);
+		ab.html(a5);
+		as2.html(a6);
+		as1.html(a4);
+		ad.html(a7);
+		as3.html(a8);
+	}
+})
+</script>
+</body>
+</html>
